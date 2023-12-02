@@ -6426,6 +6426,10 @@ self: super: with self; {
 
   lizard = callPackage ../development/python-modules/lizard { };
 
+  llama-cpp-python = callPackage ../development/python-modules/llama-cpp-python {
+    inherit (pkgs.config) cudaSupport;
+  };
+
   llfuse = callPackage ../development/python-modules/llfuse {
     inherit (pkgs) fuse;
   };
